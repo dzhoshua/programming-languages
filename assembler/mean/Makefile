@@ -1,2 +1,2 @@
 run:
-	@nasm -felf64 mean.asm && ld mean.o && ./a.out
+	@nasm -felf64 mean.asm && gcc -no-pie -fno-pie mean.o && ./a.out
