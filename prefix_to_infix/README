@@ -1,5 +1,2 @@
-```
- coverage run -m pytest tests/
-
- coverage html 
-```
+``` coverage run -m pytest tests/```
+```coverage html```
