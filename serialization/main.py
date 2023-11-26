@@ -50,7 +50,7 @@ class Widget():
         if class_name == "MainWindow":
             root_element = cls(data["title"])
         elif class_name == "Layout":
-            root_element = Layout(parent, Alignment(data["alignment"]))
+            root_element = Layout(parent, data["alignment"])
         elif class_name == "LineEdit":
             root_element = LineEdit(parent, data["max_length"])
         elif class_name == "ComboBox":
