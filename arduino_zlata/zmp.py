@@ -5,9 +5,9 @@ import datetime
 import logging
 
 # robolab123
-file_name = "arduino_zlata/data_zlata.txt"
+file_name = "data_zlata.txt"
 
-logging.basicConfig(filename='arduino_zlata/zlata.log', encoding='utf-8',
+logging.basicConfig(filename='zlata.log', encoding='utf-8',
                      level=logging.CRITICAL, format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p')
 
 connected = False
@@ -35,7 +35,7 @@ while True:
             print(f"received event: {mes}")
             if data[0] in ['p', 't', 'm']:
                 with open(file_name, 'a') as file:
-                    file.write(f"{datetime.datetime.now()}\t{mes}\n")
+                    file.write(f"{datetime.datetime.utcnow()}\t{mes}\n")
             else:
                 logging.critical("Unknown data")
 
